@@ -3,6 +3,7 @@ import 'package:rpg/models/vocation.dart';
 import 'package:rpg/shared/styled_text.dart';
 import 'package:rpg/theme.dart';
 
+
 class VocationCard extends StatelessWidget {
   const VocationCard(
       {super.key,
