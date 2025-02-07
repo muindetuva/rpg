@@ -13,4 +13,7 @@ class Character with Stats {
   void toggleIsFav() {
     _isFav = !_isFav;
   }
+
+  // getters
+  bool get isFav => _isFav;
 }
