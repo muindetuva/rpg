@@ -11,6 +11,16 @@ class Create extends StatefulWidget {
 }
 
 class _CreateState extends State<Create> {
+  final _nameController = TextEditingController();
+  final _sloganController = TextEditingController();
+
+  @override
+  void dispose() {
+    _nameController.dispose();
+    _sloganController.dispose();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -39,6 +49,7 @@ class _CreateState extends State<Create> {
 
               // Input for name and slogan
               TextField(
+                controller: _nameController,
                 decoration: InputDecoration(
                   prefixIcon: Icon(Icons.person_2),
                   label: StyledText("Character name"),
@@ -50,6 +61,7 @@ class _CreateState extends State<Create> {
               ),
               SizedBox(height: 20),
               TextField(
+                controller: _sloganController,
                 decoration: InputDecoration(
                   prefixIcon: Icon(Icons.chat),
                   label: StyledText("Character slogan"),
