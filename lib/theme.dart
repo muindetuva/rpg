@@ -24,7 +24,6 @@ ThemeData primaryTheme = ThemeData(
       foregroundColor: AppColors.textColor,
       surfaceTintColor: Colors.transparent,
       centerTitle: true),
-
   textTheme: TextTheme(
     bodyMedium: TextStyle(
       color: AppColors.textColor,
@@ -52,4 +51,12 @@ ThemeData primaryTheme = ThemeData(
     shadowColor: Colors.transparent,
     margin: EdgeInsets.only(bottom: 16),
   ),
+
+  // Input Decoration Theme
+  inputDecorationTheme: InputDecorationTheme(
+      filled: true,
+      fillColor: AppColors.secondaryColor.withValues(alpha: 0.5),
+      border: InputBorder.none,
+      labelStyle: TextStyle(color: AppColors.textColor),
+      prefixIconColor: AppColors.textColor),
 );
