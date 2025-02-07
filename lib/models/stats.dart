@@ -61,3 +61,4 @@ mixin Stats {
         {'title': 'skill', 'value': _skill.toString()},
       ];
 }
+

@@ -1,10 +1,16 @@
 import 'package:rpg/models/stats.dart';
+import 'package:rpg/models/vocation.dart';
 
 class Character with Stats {
 // constructor
-  Character({required this.name, required this.slogan, required this.id});
+  Character(
+      {required this.name,
+      required this.slogan,
+      required this.vocation,
+      required this.id});
 
   // fields
+  final Vocation vocation;
   final String name;
   final String slogan;
   final String id;
