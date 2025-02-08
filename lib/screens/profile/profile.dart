@@ -43,6 +43,29 @@ class Profile extends StatelessWidget {
               ),
             ),
             // Weapon and ability
+            SizedBox(height: 20),
+            Center(child: Icon(Icons.code, color: AppColors.primaryColor)),
+            Padding(
+              padding: EdgeInsets.all(16),
+              child: Container(
+                width: double.infinity,
+                padding: EdgeInsets.all(16),
+                color: AppColors.secondaryColor.withValues(alpha: 0.5),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    StyledHeading('Slogan'),
+                    StyledText(character.slogan),
+                    SizedBox(height: 10),
+                    StyledHeading('Weapon of Choice'),
+                    StyledText(character.vocation.weapon),
+                    SizedBox(height: 10),
+                    StyledHeading('Unique Ability'),
+                    StyledText(character.vocation.ability),
+                  ],
+                ),
+              ),
+            ),
             // stats & skills
             // save button
           ],
