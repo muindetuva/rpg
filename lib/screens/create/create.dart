@@ -47,7 +47,6 @@ class _CreateState extends State<Create> {
           context: context,
           builder: (ctx) {
             return AlertDialog(
-            
               title: const StyledHeading("Missing Character Name"),
               content:
                   StyledText("Every good RPG character needs a great name..."),
@@ -69,7 +68,6 @@ class _CreateState extends State<Create> {
           context: context,
           builder: (ctx) {
             return AlertDialog(
-              
               title: const StyledHeading("Missing Slogan"),
               content: StyledText("Remember to add a catchy slogan.."),
               actions: [
