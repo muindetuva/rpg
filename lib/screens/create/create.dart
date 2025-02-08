@@ -42,10 +42,47 @@ class _CreateState extends State<Create> {
   void handleSubmit() {
     if (_nameController.text.trim().isEmpty) {
       // some error
+
+      showDialog(
+          context: context,
+          builder: (ctx) {
+            return AlertDialog(
+            
+              title: const StyledHeading("Missing Character Name"),
+              content:
+                  StyledText("Every good RPG character needs a great name..."),
+              actions: [
+                StyledButton(
+                    onPressed: () {
+                      Navigator.pop(ctx);
+                    },
+                    child: StyledHeading('close'))
+              ],
+              actionsAlignment: MainAxisAlignment.center,
+            );
+          });
+
       return;
     }
     if (_sloganController.text.trim().isEmpty) {
-      // some error
+      showDialog(
+          context: context,
+          builder: (ctx) {
+            return AlertDialog(
+              
+              title: const StyledHeading("Missing Slogan"),
+              content: StyledText("Remember to add a catchy slogan.."),
+              actions: [
+                StyledButton(
+                    onPressed: () {
+                      Navigator.pop(ctx);
+                    },
+                    child: StyledHeading('close'))
+              ],
+              actionsAlignment: MainAxisAlignment.center,
+            );
+          });
+
       return;
     }
 
@@ -63,7 +100,7 @@ class _CreateState extends State<Create> {
       context,
       MaterialPageRoute(builder: (ctx) => Home()),
     );
-  }c
+  }
 
   @override
   Widget build(BuildContext context) {

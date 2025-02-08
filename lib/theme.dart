@@ -59,4 +59,10 @@ ThemeData primaryTheme = ThemeData(
       border: InputBorder.none,
       labelStyle: TextStyle(color: AppColors.textColor),
       prefixIconColor: AppColors.textColor),
+
+  // Dialog theme
+  dialogTheme: DialogTheme(
+    backgroundColor: AppColors.secondaryAccent,
+    surfaceTintColor: Colors.transparent,
+  ),
 );
