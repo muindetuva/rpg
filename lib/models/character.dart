@@ -28,23 +28,21 @@ class Character with Stats {
     skills.add(skill);
   }
 
+// character to firestore (map)
+  Map<String, dynamic> toFirestore() {
+    return {
+      "name": name,
+      "slogan": slogan,
+      "isFav": _isFav,
+      "vocation": vocation.toString(),
+      "skills": skills.map((skill) => skill.id).toList(),
+      'stats': statsAsMap,
+      'poins': points
+    };
+  }
+
+
+
   // getters
   bool get isFav => _isFav;
 }
-
-// dummy character data
-List<Character> characters = [
-  Character(
-      name: "Klara", slogan: "Kapumf", vocation: Vocation.wizard, id: "1"),
-  Character(
-      name: "Jonny",
-      slogan: "Light me up...",
-      vocation: Vocation.junkie,
-      id: "2"),
-  Character(
-      name: "Crimson",
-      slogan: "Fire in the hole!",
-      vocation: Vocation.raider,
-      id: "3"),
-  Character(name: "Tuva", slogan: "Mwanzo", vocation: Vocation.ninja, id: "4"),
-];
