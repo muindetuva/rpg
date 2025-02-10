@@ -38,7 +38,7 @@ class Character with Stats {
       "vocation": vocation.toString(),
       "skills": skills.map((skill) => skill.id).toList(),
       'stats': statsAsMap,
-      'poins': points
+      'points': points
     };
   }
 
