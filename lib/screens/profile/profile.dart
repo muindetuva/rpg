@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:rpg/models/character.dart';
+import 'package:rpg/screens/profile/skill_list.dart';
+import 'package:rpg/screens/profile/stats_table.dart';
+import 'package:rpg/shared/styled_button.dart';
 import 'package:rpg/shared/styled_text.dart';
 import 'package:rpg/theme.dart';
 
@@ -67,7 +70,30 @@ class Profile extends StatelessWidget {
               ),
             ),
             // stats & skills
+            Container(
+              alignment: Alignment.center,
+              child: Column(
+                children: [
+                  StatsTable(character),
+                  SkillList(character),
+                ],
+              ),
+            ),
             // save button
+            StyledButton(
+              onPressed: () {
+                ScaffoldMessenger.of(context).showSnackBar(
+                  SnackBar(
+                    content: StyledHeading("Character Saved."),
+                    showCloseIcon: true,
+                    duration: Duration(seconds: 2),
+                    backgroundColor: AppColors.secondaryColor,
+                  ),
+                );
+              },
+              child: StyledHeading('Save Character'),
+            ),
+            SizedBox(height: 20)
           ],
         ),
       ),
